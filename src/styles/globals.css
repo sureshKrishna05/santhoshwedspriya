@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bone-white: #F7F2E8;
+    --color-warm-ivory: #FFF9EF;
+    --color-antique-gold: #B88A43;
+    --color-champagne-gold: #D9B875;
+    --color-deep-emerald: #123F35;
+    --color-forest-green: #204C3D;
+    --color-dark-brown: #4A3024;
+    --color-muted-text: #756957;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #4A3024;
+    background-color: #F7F2E8;
+  }
+
+  ::selection {
+    background-color: rgba(184, 138, 67, 0.25);
+    color: #123F35;
+  }
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Custom South Indian scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F2E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B88A43;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #966f33;
+}
+
+/* Ornamental gold frame & lines */
+.gold-border {
+  border-color: #B88A43;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B88A43 0%, #D9B875 50%, #8A642B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #B88A43, #D9B875, #B88A43) 1;
+}
+
+/* Deckle edge simulation */
+.deckle-edge {
+  filter: drop-shadow(0 4px 12px rgba(18, 63, 53, 0.15));
+  clip-path: polygon(
+    0% 0.5%, 2% 0%, 4% 0.8%, 6% 0.2%, 8% 0.6%, 10% 0%, 12% 0.5%, 15% 0.1%, 18% 0.7%, 20% 0.2%,
+    23% 0.6%, 26% 0.1%, 30% 0.8%, 35% 0.2%, 40% 0.6%, 45% 0%, 50% 0.7%, 55% 0.2%, 60% 0.5%,
+    65% 0.1%, 70% 0.8%, 75% 0.3%, 80% 0.6%, 85% 0.1%, 90% 0.7%, 95% 0.2%, 98% 0.6%, 100% 0%,
+    99.8% 5%, 100% 10%, 99.5% 15%, 100% 20%, 99.6% 25%, 100% 30%, 99.4% 35%, 100% 40%, 99.7% 45%,
+    100% 50%, 99.5% 55%, 100% 60%, 99.6% 65%, 100% 70%, 99.4% 75%, 100% 80%, 99.7% 85%, 100% 90%,
+    99.5% 95%, 100% 100%,
+    98% 99.5%, 95% 100%, 92% 99.3%, 90% 99.8%, 85% 99.4%, 80% 100%, 75% 99.5%, 70% 99.8%,
+    65% 99.3%, 60% 100%, 55% 99.6%, 50% 99.2%, 45% 100%, 40% 99.4%, 35% 99.8%, 30% 99.3%,
+    25% 100%, 20% 99.5%, 15% 99.8%, 10% 99.2%, 5% 100%, 2% 99.5%, 0% 100%,
+    0.3% 95%, 0% 90%, 0.4% 85%, 0.1% 80%, 0.5% 75%, 0.2% 70%, 0.6% 65%, 0.1% 60%, 0.5% 55%,
+    0.2% 50%, 0.6% 45%, 0.1% 40%, 0.5% 35%, 0.2% 30%, 0.6% 25%, 0.1% 20%, 0.5% 15%, 0.2% 10%, 0.4% 5%
+  );
+}

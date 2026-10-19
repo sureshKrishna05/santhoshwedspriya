@@ -1,0 +1,83 @@
+/* Micro-animations and keyframes for South Indian wedding website */
+
+@keyframes water-shimmer {
+  0%, 100% {
+    opacity: 0.75;
+    filter: brightness(0.95);
+  }
+  50% {
+    opacity: 0.98;
+    filter: brightness(1.15);
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.95;
+  }
+}
+
+@keyframes lamp-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(217, 184, 117, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(217, 184, 117, 0.8));
+  }
+}
+
+@keyframes moon-halo {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(255, 238, 180, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 238, 180, 0.65));
+  }
+}
+
+@keyframes gold-thread-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Hero specialized non-transform animation classes (avoids transform fights with Framer Motion) */
+.hero-moon-glow {
+  animation: moon-halo 5s ease-in-out infinite;
+}
+
+.hero-water-surface {
+  animation: water-shimmer 4.5s ease-in-out infinite;
+}
+
+.hero-houseboat {
+  filter: drop-shadow(0 6px 16px rgba(18, 63, 53, 0.35));
+}
+
+.hero-reflections {
+  mix-blend-mode: screen;
+  animation: water-shimmer 3.2s ease-in-out infinite;
+}
+
+.animate-water-shimmer {
+  animation: water-shimmer 3s ease-in-out infinite;
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle 2.5s ease-in-out infinite;
+}
+
+.animate-lamp-pulse {
+  animation: lamp-pulse 3s ease-in-out infinite;
+}
+
+.animate-gold-thread {
+  background-size: 200% auto;
+  animation: gold-thread-flow 3s linear infinite;
+}
